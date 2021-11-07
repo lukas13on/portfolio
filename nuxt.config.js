@@ -6,12 +6,11 @@ export default {
             ]
     },
     generate: {
-        dir: 'dist',
-        subFolders: true
+        dir: 'dist'
     },
     target: 'static', // 'static' or 'server'
     router: {
         base: '/portfolio/' // remove router for server
     },
-    ssr: true // true for static, false for server
+    ssr: false // true for static, false for server
 };
