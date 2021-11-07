@@ -2,13 +2,14 @@
     "description": "Meu portfolio",
     "name": "portfolio",
     "version": "1.0.0",
+    "homepage": "https://lukas13on.github.io/portfolio/",
     "license": "BSD-3-Clause",
     "scripts": {
         "dev": "nuxt",
         "build": "nuxt build",
         "generate": "nuxt generate",
         "start": "nuxt start",
-        "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+        "deploy": "gh-pages -d dist"
     },
     "author": {
         "name": "Lucas de Oliveira Neitzke",
@@ -26,9 +27,7 @@
         "nuxt": "latest",
         "sweetalert2": "latest",
         "vue": "latest",
-        "vue-the-mask": "latest"
-    },
-    "devDependencies": {
-        "push-dir": "^0.4.1"
+        "vue-the-mask": "latest",
+        "gh-pages": "latest"
     }
 }

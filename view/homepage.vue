@@ -1,18 +1,16 @@
 <script>
-import appHeader from "../components/header.vue";
-import homepageProfile from "../components/view/homepage/profile.vue";
-import homepageAbout from "../components/view/homepage/about.vue";
-import homepagePortfolio from "../components/view/homepage/portfolio.vue";
-import homepageSkills from "../components/view/homepage/skills.vue";
-import homepageContact from "../components/view/homepage/contact.vue";
-import appFooter from "../components/footer.vue";
+import appHeader from "@/components/header.vue";
+import homepageProfile from "@/components/view/homepage/profile.vue";
+import homepageAbout from "@/components/view/homepage/about.vue";
+import homepagePortfolio from "@/components/view/homepage/portfolio.vue";
+import homepageSkills from "@/components/view/homepage/skills.vue";
+import homepageContact from "@/components/view/homepage/contact.vue";
+import appFooter from "@/components/footer.vue";
 
 export default {
   name: "view-homepage",
   data: function () {
-    return {
-      test: "aaaa",
-    };
+    return {};
   },
   components: {
     "application-header": appHeader,

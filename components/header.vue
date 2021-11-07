@@ -1,5 +1,5 @@
 <script>
-import appHeaderNav from "../components/header/navbar.vue";
+import appHeaderNav from "@/components/header/navbar.vue";
 
 export default {
   name: "application-header",

@@ -1,6 +1,6 @@
 <script>
-import viewHomePage from "../view/homepage.vue";
-console.log(viewHomePage.data);
+const pk = require("@/package.json");
+import viewHomePage from "@/view/homepage.vue";
 
 export default {
   head: function () {
@@ -8,16 +8,55 @@ export default {
       title: this.title,
       meta: [
         {
+          hid: "viewport",
+          name: "viewport",
+          content: this.viewport,
+        },
+        {
           hid: "description",
           name: "description",
-          content: "My custom description",
+          content: this.seo.description,
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: this.seo.keywords,
+        },
+        {
+          hid: "og:type",
+          property: "og:type",
+          content: this.seo.type,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.seo.title,
+        },
+        {
+          hid: "og:url",
+          property: "og:url",
+          content: this.seo.url,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.seo.image,
         },
       ],
     };
   },
   data: function () {
     return {
-      title: "Home Page",
+      viewport: "width=device-width, initial-scale=1",
+      seo: {
+        type: "article",
+        title: "Lucas de Oliveira Neitzke",
+        description:
+          "Desenvolvedor e programador de sites e sistemas para a internet.",
+        keywords: ["desenvolvedor", "programador", "backend", "frontend"],
+        url: pk.homepage,
+        image: require("@/assets/images/profile.jpg"),
+      },
     };
   },
   components: {

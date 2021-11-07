@@ -1,5 +1,5 @@
 <script>
-const $ = require("jquery");
+import $ from "jquery";
 export default {
   name: "homepage-skills",
   data: function () {
