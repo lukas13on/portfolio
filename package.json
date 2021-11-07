@@ -7,7 +7,8 @@
         "dev": "nuxt",
         "build": "nuxt build",
         "generate": "nuxt generate",
-        "start": "nuxt start"
+        "start": "nuxt start",
+        "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
     },
     "author": {
         "name": "Lucas de Oliveira Neitzke",
@@ -26,5 +27,8 @@
         "sweetalert2": "latest",
         "vue": "latest",
         "vue-the-mask": "latest"
+    },
+    "devDependencies": {
+        "push-dir": "^0.4.1"
     }
 }
