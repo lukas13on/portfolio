@@ -8,5 +8,9 @@ export default {
     generate: {
         dir: 'dist'
     },
-    target: 'static'
+    target: 'static', // 'static' or 'server'
+    router: {
+        base: '/portfolio/' // remove router for server
+    },
+    ssr: false // true for static, false for server
 };
