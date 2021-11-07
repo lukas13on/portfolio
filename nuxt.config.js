@@ -9,6 +9,6 @@ export default {
         dir: 'dist',
         subFolders: true
     },
-    target: 'server', // default is 'server'
-    ssr: true // default is true
+    target: 'static', // 'static' or 'server'
+    ssr: true // true for static, false for server
 };
