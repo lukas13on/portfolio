@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- Invisivel -->
+    <meta name="robots" content="noindex" />
+
+    <!-- ENCODING -->
+    <meta charset="UTF-8" />
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- EDGE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- VIEWPORT-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Lucas O. Neitzke</title>
+    <meta name="description" content="..." />
+    <meta name="keywords" content="desenvolvedor, programador, php, fullstack, javascript, html,  css" />
+    <meta name="author" content="Lucas de Oliveira Neitzke" />
+    <meta property="og:title" content="Portfolio - Lucas O. Neitzke" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://lukas13on.github.io/porfolio/" />
+    <meta property="og:image" content="src/img/cover.png" />
+
+    <!-- LIB CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.2/css/bootstrap.min.css"
+        integrity="sha512-SCpMC7NhtrwHpzwKlE1l6ks0rS+GbMJJpoQw/A742VaxdGcQKqVD8F/y/m9WLOfIPppy7mWIs/kS0bKgSI0Bfw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" type="text/css" href="src/css/" /> -->
+
+    <!-- APP CSS -->
+    <link rel="stylesheet" type="text/css" href="src/css/anim.css" />
+
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="src/css/" /> -->
+
+</head>
+
+<body>
+
+    <div id="resources">
+
+        <!-- <script src="src/js/" type="text/javascript"></script> -->
+
+        <!-- LIBRARIES -->
+        <script type="text/javascript" src="https://unpkg.com/vue@next" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="src/js/lib//jquery/jquery.min.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.2/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/sweetalert2@11" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="https://kit.fontawesome.com/c629f8da88.js" crossorigin="anonymous"></script>
+
+        <!-- APPLICATION -->
+        <script type="text/javascript" src="src/js/app.js"></script>
+
+        <!-- APPLICATION -> DISPATCH  -->
+        <script type="text/javascript" src="src/js/app/dispatch.js"></script>
+
+        <!-- APPLICATION -> MODAL  -->
+        <script type="text/javascript" src="src/js/app/modal/opentab.js"></script>
+        <script type="text/javascript" src="src/js/app/modal/contact.js"></script>
+
+        <!-- APPLICATION -> HEADER  -->
+        <script type="text/javascript" src="src/js/app/header.js"></script>
+        <script type="text/javascript" src="src/js/app/header/navbar.js"></script>
+
+        <!-- APPLICATION -> MAIN  -->
+        <script type="text/javascript" src="src/js/app/main.js"></script>
+        <script type="text/javascript" src="src/js/app/main/profile.js"></script>
+        <script type="text/javascript" src="src/js/app/main/about.js"></script>
+        <script type="text/javascript" src="src/js/app/main/skills.js"></script>
+        <script type="text/javascript" src="src/js/app/main/portfolio.js"></script>
+        <script type="text/javascript" src="src/js/app/main/contact.js"></script>
+
+        <!-- APPLICATION -> FOOTER  -->
+        <script type="text/javascript" src="src/js/app/footer.js"></script>
+
+    </div>
+
+    <div id="application">
+        <app-header></app-header>
+        <app-main></app-main>
+        <app-footer></app-footer>
+    </div>
+
+    <script type="text/javascript">
+        var vm = Application.mount('#application');
+    </script>
+
+</body>
+
+</html>

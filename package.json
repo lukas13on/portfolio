@@ -1,0 +1,30 @@
+{
+    "description": "Meu portfolio",
+    "name": "portfolio",
+    "version": "1.0.0",
+    "license": "BSD-3-Clause",
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "start": "nuxt start"
+    },
+    "author": {
+        "name": "Lucas de Oliveira Neitzke",
+        "email": "luka.pc.pc@gmail.com",
+        "url": "https://google.com.br"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lukas13on/porfolio"
+    },
+    "dependencies": {
+        "bootstrap": "latest",
+        "font-awesome": "latest",
+        "jquery": "latest",
+        "nuxt": "latest",
+        "sweetalert2": "latest",
+        "vue": "latest",
+        "vue-the-mask": "latest"
+    }
+}
