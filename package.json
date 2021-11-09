@@ -8,6 +8,7 @@
         "dev": "nuxt",
         "build": "nuxt build",
         "generate": "nuxt generate",
+        "seofix": "node seofix.js",
         "start": "nuxt start",
         "deploy": "gh-pages -d dist"
     },
@@ -23,11 +24,12 @@
     "dependencies": {
         "bootstrap": "latest",
         "font-awesome": "latest",
+        "fs": "latest",
+        "gh-pages": "latest",
         "jquery": "latest",
         "nuxt": "latest",
+        "path": "latest",
         "sweetalert2": "latest",
-        "vue": "latest",
-        "vue-the-mask": "latest",
-        "gh-pages": "latest"
+        "vue": "latest"
     }
 }
