@@ -78,7 +78,7 @@ export default {
         assets: 'src/assets/',
     },
     router: {
-        base: '/',
+        base: '/portfolio/',
     },
     target: 'static', // 'static' or 'server'
     ssr: false // true for static, false for server
