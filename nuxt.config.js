@@ -1,54 +1,59 @@
 export default {
+    googleAnalytics: {
+        id: "G-TD0Z6Y0SD7"
+    },
     head: function () {
-        const data = {
-            title: "Lucas de Oliveira Neitzke",
+        const info = {
             viewport: "width=device-width, initial-scale=1",
             seo: {
+                title: "Lucas de Oliveira Neitzke",
                 type: "article",
                 description:
                     "Desenvolvedor e programador de sites e sistemas para a internet.",
                 keywords: ["desenvolvedor", "programador", "backend", "frontend"],
                 url: "https://lukas13on.github.io/portfolio/",
-                image: "https://lukas13on.github.io/portfolio/_nuxt/img/og-image.jpg",
-            }
+                image: {
+                    url: "https://lukas13on.github.io/portfolio/_nuxt/img/og-image.jpg",
+                },
+            },
         };
         return {
-            title: data.title,
+            title: info.seo.title,
             meta: [
                 {
                     hid: "viewport",
                     name: "viewport",
-                    content: data.viewport,
+                    content: info.viewport,
                 },
                 {
                     hid: "description",
                     name: "description",
-                    content: data.seo.description,
+                    content: info.seo.description,
                 },
                 {
                     hid: "keywords",
                     name: "keywords",
-                    content: data.seo.keywords.join(","),
+                    content: info.seo.keywords.join(","),
                 },
                 {
                     hid: "og:type",
                     property: "og:type",
-                    content: data.seo.type,
+                    content: info.seo.type,
                 },
                 {
                     hid: "og:title",
                     property: "og:title",
-                    content: data.seo.title,
+                    content: info.seo.title,
                 },
                 {
                     hid: "og:url",
                     property: "og:url",
-                    content: data.seo.url,
+                    content: info.seo.url,
                 },
                 {
                     hid: "og:image",
                     property: "og:image",
-                    content: data.seo.image,
+                    content: info.seo.image.url,
                 },
             ],
         };

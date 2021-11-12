@@ -9,10 +9,13 @@ export default {
       },
       description: {
         paragraphs: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula rutrum, tincidunt enim id, maximus odio. Suspendisse vulputate quam nec faucibus pharetra. Duis viverra eros non nulla blandit, a placerat tortor tempor. Aenean congue lectus finibus urna dictum tristique. Aliquam hendrerit felis vel massa laoreet congue. Duis eros risus, bibendum et porttitor et, egestas vitae neque. Donec a erat accumsan, euismod felis vitae, aliquam libero. Vivamus pulvinar arcu ac aliquet tempor. Vivamus metus justo, viverra ut magna sed, mollis feugiat erat. Mauris facilisis dignissim eros.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula rutrum, tincidunt enim id, maximus odio. Suspendisse vulputate quam nec faucibus pharetra. Duis viverra eros non nulla blandit, a placerat tortor tempor. Aenean congue lectus finibus urna dictum tristique. Aliquam hendrerit felis vel massa laoreet congue. Duis eros risus, bibendum et porttitor et, egestas vitae neque. Donec a erat accumsan, euismod felis vitae, aliquam libero. Vivamus pulvinar arcu ac aliquet tempor. Vivamus metus justo, viverra ut magna sed, mollis feugiat erat. Mauris facilisis dignissim eros.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula rutrum, tincidunt enim id, maximus odio. Suspendisse vulputate quam nec faucibus pharetra. Duis viverra eros non nulla blandit, a placerat tortor tempor. Aenean congue lectus finibus urna dictum tristique. Aliquam hendrerit felis vel massa laoreet congue. Duis eros risus, bibendum et porttitor et, egestas vitae neque. Donec a erat accumsan, euismod felis vitae, aliquam libero. Vivamus pulvinar arcu ac aliquet tempor. Vivamus metus justo, viverra ut magna sed, mollis feugiat erat. Mauris facilisis dignissim eros.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at ligula rutrum, tincidunt enim id, maximus odio. Suspendisse vulputate quam nec faucibus pharetra. Duis viverra eros non nulla blandit, a placerat tortor tempor. Aenean congue lectus finibus urna dictum tristique. Aliquam hendrerit felis vel massa laoreet congue. Duis eros risus, bibendum et porttitor et, egestas vitae neque. Donec a erat accumsan, euismod felis vitae, aliquam libero. Vivamus pulvinar arcu ac aliquet tempor. Vivamus metus justo, viverra ut magna sed, mollis feugiat erat. Mauris facilisis dignissim eros.",
+          "Atualmente tenho 25 anos, moro no Paraná e sou programador e desenvolvedor web Full Stack.",
+          "Meu interesse pela área surgiu em 2016, eu costumava jogar online e com o tempo me vi interessado em programar, contudo, nesta época eu não possuía conhecimento em programação de jogos, sendo assim iniciei minha carreira desenvolvendo sites para internet. Com o passar dos anos me identifiquei com o trabalho, realizei projetos para: M3 Locações de máquinas, Inove Formaturas e Madaly eventos.",
+          "Em 2019 já não satisfeito somente em desenvolver sites, entrei em um projeto de desenvolvimento de sistemas, na empresa Pop Hub. Neste projeto, trabalho com o Front end e Back end da plataforma (dashboard) e o Back end de uma aplicação API, que faz integrações com Marketplaces realizando também, o desenvolvimento do banco de dados da plataforma e API.",
+          "Desde 2016, estudei e realizei projetos com o objetivo de aprimorar meus conhecimentos sobre as linguagens de programação, atualmente sou programador Full Stack, tendo domínio sobre: PHP, HTML, Java Script e CSS.",
+          "Dentre as minhas habilidades, posso elencar que sou familiarizado com PHP na criação de dashboards em PHP Crud, com Javascript Vanilla e CSS.",
+          "No início deste ano tive dificuldades na conciliação de Front end com Back end de forma reativa em um projeto pessoal, durante a busca por uma solução, encontrei o Vue.js e me identifiquei, desde então estudo este framework no objetivo de criar aplicações reativas, mantendo a programação original e a segurança. Para cumprir estes requisitos tive que utilizar o Nuxt.js em conjunto ao Vue.js, uma vez que este, cria páginas estáticas e dinâmicas de forma satisfatória.",
+          "Tendo 5 anos de experiência e sendo desenvolvedor, busco neste momento de minha carreira, novos projetos para que possa aprimorar minhas habilidades, em especial gostaria de um projeto que utilizasse Vue.js e Nuxt.js. Entretanto, estou aberto a novas oportunidades de trabalho, sejam elas nas linguagens que domino, ou novos desafios em linguagens quais ainda não possuo tanto conhecimento. ",
         ],
       },
       services: [
@@ -85,7 +88,7 @@ export default {
 </script>
 
 <template>
-  <article id="about">
+  <section id="about">
     <div class="">
       <div class="bg-square bg-primary text-light text-center">
         <h1>Sobre mim</h1>
@@ -123,7 +126,7 @@ export default {
                   {{ service.text }}
                 </span>
               </li>
-              <li class="list-group-item text-end">
+              <li class="list-group-item text-center text-lg-end">
                 <a href="#contact" class="btn btn-lg btn-primary">
                   Entrar em contato
                 </a>
@@ -158,5 +161,5 @@ export default {
         </div>
       </div>
     </div>
-  </article>
+  </section>
 </template>

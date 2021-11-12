@@ -1,12 +1,15 @@
 
 <script>
 import $ from "jquery";
+import External from "@/src/controllers/dispatch/external.js";
+
 export default {
   name: "homepage-portfolio",
   data: function () {
     return {
+      autoplay: true,
       current: 1,
-      interval: 2500,
+      interval: 5000,
       groups: [
         {
           id: "m3locacoes",
@@ -17,6 +20,7 @@ export default {
             url: "assets/images/portfolio/cropped/01.png",
             alt: "M3 Locações",
           },
+          url: "https://m3locacoesdemaquinas.com.br/",
         },
         {
           id: "madaly",
@@ -27,6 +31,7 @@ export default {
             url: "assets/images/portfolio/cropped/02.png",
             alt: "Madaly Eventos",
           },
+          url: "https://www.madalyeventos.com.br/",
         },
         {
           id: "inoveformaturas",
@@ -37,6 +42,7 @@ export default {
             url: "assets/images/portfolio/cropped/03.png",
             alt: "M3 Locações",
           },
+          url: "https://www.inoveformaturas.com.br/",
         },
         {
           id: "pophub",
@@ -47,11 +53,22 @@ export default {
             url: "assets/images/portfolio/cropped/04.png",
             alt: "Plataforma Pophub",
           },
+          url: "https://pophub.com.br/",
         },
       ],
     };
   },
   methods: {
+    openLink: function () {
+      External(this.groups[this.current].url, true);
+    },
+    toggleState: function () {
+      if (this.autoplay) {
+        this.autoplay = false;
+      } else {
+        this.autoplay = true;
+      }
+    },
     slideTo: function (index) {
       index = parseInt(index);
       this.current = index;
@@ -60,10 +77,10 @@ export default {
         key = parseInt(key);
 
         if (key === index) {
-          this.groups[key]["active"] = true;
+          this.groups[key].active = true;
           this.current = key;
         } else {
-          this.groups[key]["active"] = false;
+          this.groups[key].active = false;
         }
       }
     },
@@ -122,14 +139,19 @@ export default {
     next: function () {
       return this.navigation("next");
     },
+    playing: function () {
+      return this.autoplay;
+    },
   },
-  computed: {
-    prev: function () {
-      return this.navigation("prev");
-    },
-    next: function () {
-      return this.navigation("next");
-    },
+  mounted: function () {
+    var self = this;
+    if (self.autoplay && self.interval) {
+      setInterval(function () {
+        if (self.autoplay === true) {
+          self.slideTo(self.navigation("next"));
+        }
+      }, self.interval);
+    }
   },
 };
 </script>
@@ -137,7 +159,7 @@ export default {
 <template>
   <section id="portfolio">
     <div class="">
-      <div class="bg-secondary bg-circle text-center text-light">
+      <div class="bg-dark bg-circle text-center text-light">
         <h1>Portfolio</h1>
         <p>Veja os projetos executados.</p>
       </div>
@@ -149,6 +171,16 @@ export default {
             class="carousel carousel-white slide"
             :data-current="current"
           >
+            <div class="carousel-top">
+              <a
+                @click.prevent="toggleState($event)"
+                class="btn btn-lg btn-dark"
+              >
+                <i v-if="playing" class="fa fa-pause"></i>
+                <i v-else class="fa fa-play"></i>
+              </a>
+            </div>
+
             <div class="carousel-indicators">
               <button
                 type="button"
@@ -190,6 +222,13 @@ export default {
                 <div class="carousel-caption">
                   <h3>{{ group.title }}</h3>
                   <h6>{{ group.subtitle }}</h6>
+                  <a
+                    @click.prevent="openLink()"
+                    class="btn btn-dark"
+                    :href="group.url"
+                    title="Visitar o site"
+                    >Visitar o site
+                  </a>
                 </div>
               </div>
             </div>

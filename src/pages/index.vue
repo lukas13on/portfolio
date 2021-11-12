@@ -1,5 +1,5 @@
 <script>
-import viewHomePage from "@/src/view/homepage.vue";
+import viewHomePage from "@/src/views/homepage.vue";
 
 export default {
   components: {
@@ -11,10 +11,3 @@ export default {
 <template>
   <view-homepage></view-homepage>
 </template>
-
-<style>
-@import url("@/node_modules/bootstrap/dist/css/bootstrap.min.css");
-@import url("@/node_modules/font-awesome/css/font-awesome.min.css");
-@import url("@/src/assets/styles/main.css");
-@import url("@/src/assets/styles/anim.css");
-</style>

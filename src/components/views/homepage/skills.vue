@@ -1,5 +1,4 @@
 <script>
-import $ from "jquery";
 export default {
   name: "homepage-skills",
   data: function () {
@@ -120,10 +119,14 @@ export default {
     toggle: function (groupIndex, topicIndex) {
       for (var x = 0; x < this.groups.length; x++) {
         for (var y = 0; y < this.groups[x].topics.length; y++) {
-          this.groups[x].topics[y].active = false;
+          if (y !== topicIndex) {
+            this.groups[x].topics[y].active = false;
+          }
         }
       }
-      this.groups[groupIndex].topics[topicIndex].active = true;
+      var isActive = this.groups[groupIndex].topics[topicIndex].active;
+      var toggle = isActive ? false : true;
+      this.groups[groupIndex].topics[topicIndex].active = toggle;
     },
     buttonClass: function (groupIndex, topicIndex) {
       var defaultClass = "accordion-button";
@@ -156,7 +159,7 @@ export default {
       <div class="row p-block m-0">
         <div
           v-for="(group, groupIndex) in groups"
-          class="col-12 col-lg-3 mb-4"
+          class="col-12 col-md-6 col-xl-3 mb-4"
           :key="groupIndex"
         >
           <div class="card">

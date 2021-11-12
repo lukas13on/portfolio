@@ -251,7 +251,7 @@ export default {
       var checkouts = {
         /** validacao de tamanho */
         size: function (group) {
-          console.log("Aqui", group);
+          //console.log("Aqui", group);
           if (group.control.minlength && group.control.maxlength) {
             var cur = group.control.value.length;
             var minlength = group.control.minlength;
@@ -287,8 +287,8 @@ export default {
           }
         },
       };
-      var that = this;
-      console.log(that.groups);
+
+      //console.log(that.groups);
       var group = this.groups[this.indexer(id)];
       var errors = 0;
 
@@ -322,10 +322,9 @@ export default {
 </script>
 
 <template>
-  <!-- <Section> -->
   <section id="contact">
     <div class="container-fluid p-0">
-      <div class="bg-secondary bg-circle text-light">
+      <div class="bg-dark bg-circle text-light">
         <h1>Contato</h1>
         <p>Preencha os dados corretamente para entrar em contato.</p>
       </div>
@@ -366,12 +365,14 @@ export default {
                   mask($event, group.id);
                   validate($event, group.id);
                 "
+                @keyup.prevent="validate($event, group.id)"
                 :class="controlClass(group.id)"
                 :type="group.control.type"
                 v-model="group.control.value"
                 :placeholder="group.control.placeholder"
                 :id="'input-' + group.id"
                 :name="group.id"
+                autocomplete="off"
               />
               <!-- </Input> -->
 
@@ -418,7 +419,7 @@ export default {
           </div>
 
           <div class="col-12">
-            <div class="button-group text-center text-md-end mt-2">
+            <div class="button-group text-center text-lg-end mt-2">
               <button
                 type="submit"
                 :class="
@@ -435,5 +436,4 @@ export default {
       </div>
     </div>
   </section>
-  <!-- </Section> -->
 </template>

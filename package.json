@@ -8,9 +8,8 @@
         "dev": "nuxt",
         "build": "nuxt build",
         "generate": "nuxt generate",
-        "seofix": "node seofix.js",
         "start": "nuxt start",
-        "deploy": "gh-pages -d dist"
+        "deploy": "node gh-pages.js"
     },
     "author": {
         "name": "Lucas de Oliveira Neitzke",
@@ -28,6 +27,7 @@
         "gh-pages": "latest",
         "jquery": "latest",
         "nuxt": "latest",
+        "@nuxtjs/google-analytics": "latest",
         "path": "latest",
         "sweetalert2": "latest",
         "vue": "latest"

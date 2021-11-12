@@ -1,4 +1,6 @@
 <script>
+import External from "@/src/controllers/dispatch/external.js";
+
 export default {
   name: "homepage-profile",
   data: function () {
@@ -7,42 +9,45 @@ export default {
       subtitle: "Desenvolvedor PHP Fullstack",
       description: {
         paragraphs: [
-          'Se você está procurando uma pessoa que possa tocar seu projeto "da base ao acabamento", então, você veio ao lugar certo. Desde o planejamento à execução do perojeto, back-end e fron-end, não importa.',
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et erat efficitur, dignissim tortor sed, dictum urna. Ut erat diam, auctor sed malesuada ac, feugiat nec turpis. Aliquam posuere dui nec nunc ultricies, vitae feugiat magna malesuada placerat.",
         ],
       },
       socials: [
         {
           text: "Github",
-          href: "#",
+          href: "https://github.com/lukas13on",
           target: "_blank",
           icon: "fa fa-github",
         },
         {
           text: "Linkedin",
-          href: "#",
+          href: "https://www.linkedin.com/in/lucas-o-neitzke/",
           target: "_blank",
           icon: "fa fa-linkedin",
         },
         {
           text: "Facebook",
-          href: "#",
+          href: "https://www.facebook.com/lucas.o.neitzke/",
           target: "_blank",
           icon: "fa fa-facebook",
         },
         {
           text: "Instagram",
-          href: "#",
+          href: "https://www.instagram.com/lucas.o.neitzke/",
           target: "_blank",
           icon: "fa fa-instagram",
         },
         {
           text: "Twitter",
-          href: "#",
+          href: "https://twitter.com/lucas_o_neitzke",
           target: "_blank",
           icon: "fa fa-twitter",
         },
       ],
     };
+  },
+  methods: {
+    openLink: External,
   },
 };
 </script>
@@ -65,7 +70,6 @@ export default {
 
     <div class="detail">
       <img class="photo" />
-
       <h1 class="title cursive">{{ title }}</h1>
       <h2 class="sub-title">{{ subtitle }}</h2>
 
@@ -80,7 +84,7 @@ export default {
       <ul class="socials">
         <li class="social-item" v-for="(social, index) in socials" :key="index">
           <a
-            @click="false"
+            @click.prevent="openLink(social.href, true)"
             class="social-link"
             :href="social.href"
             :target="social.target"

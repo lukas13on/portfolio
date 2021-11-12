@@ -1,10 +1,10 @@
-<script>
+1<script>
 import appHeader from "@/src/components/header.vue";
-import homepageProfile from "@/src/components/view/homepage/profile.vue";
-import homepageAbout from "@/src/components/view/homepage/about.vue";
-import homepagePortfolio from "@/src/components/view/homepage/portfolio.vue";
-import homepageSkills from "@/src/components/view/homepage/skills.vue";
-import homepageContact from "@/src/components/view/homepage/contact.vue";
+import homepageProfile from "@/src/components/views/homepage/profile.vue";
+import homepageAbout from "@/src/components/views/homepage/about.vue";
+import homepagePortfolio from "@/src/components/views/homepage/portfolio.vue";
+import homepageSkills from "@/src/components/views/homepage/skills.vue";
+import homepageContact from "@/src/components/views/homepage/contact.vue";
 import appFooter from "@/src/components/footer.vue";
 
 export default {
@@ -27,13 +27,20 @@ export default {
 <template>
   <main>
     <application-header></application-header>
-    <section>
+    <article>
       <homepage-profile></homepage-profile>
       <homepage-about></homepage-about>
       <homepage-portfolio></homepage-portfolio>
       <homepage-skills></homepage-skills>
       <homepage-contact></homepage-contact>
-    </section>
+    </article>
     <application-footer></application-footer>
   </main>
 </template>
+
+<style>
+@import url("@/node_modules/bootstrap/dist/css/bootstrap.min.css");
+@import url("@/node_modules/font-awesome/css/font-awesome.min.css");
+@import url("@/src/assets/styles/main.css");
+@import url("@/src/assets/styles/anim.css");
+</style>
