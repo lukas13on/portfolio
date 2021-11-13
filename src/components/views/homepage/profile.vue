@@ -6,7 +6,7 @@ export default {
   data: function () {
     return {
       title: "Lucas de Oliveira Neitzke",
-      subtitle: "Desenvolvedor PHP Fullstack",
+      subtitle: "Desenvolvedor Web Fullstack",
       description: {
         paragraphs: [
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et erat efficitur, dignissim tortor sed, dictum urna. Ut erat diam, auctor sed malesuada ac, feugiat nec turpis. Aliquam posuere dui nec nunc ultricies, vitae feugiat magna malesuada placerat.",

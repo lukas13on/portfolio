@@ -94,7 +94,7 @@ export default {
           label: "Mensagem",
           tooltip: "Sua mensagem para o contato.",
           initial: true,
-          required: false,
+          required: true,
           valid: true,
           mask: false,
           control: {
@@ -150,7 +150,7 @@ export default {
         if (required) {
           html +=
             /*html*/
-            `<li>Esse campo é requerido.</li>`;
+            `<li>Esse campo é importante.</li>`;
         }
 
         if ((min && max) !== undefined) {
@@ -338,7 +338,7 @@ export default {
           />
         </div>
 
-        <form class="col-12 col-lg-6 row m-0 p-0" @submit.prevent="submit()">
+        <form class="col-12 col-lg-6 row m-0" @submit.prevent="submit()">
           <div
             v-for="(group, index) in groups"
             class="col-12 mb-2"
@@ -423,7 +423,7 @@ export default {
               <button
                 type="submit"
                 :class="
-                  'btn btn-lg' +
+                  'btn-block btn btn-lg' +
                   (!validation ? ' btn-danger disabled' : ' btn-primary')
                 "
                 :disabled="!validation"

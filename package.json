@@ -1,5 +1,5 @@
 {
-    "description": "Meu portfolio",
+    "description": "Desenvolvedor Web Fullstack. PHP, SQL, JS, HTML, CSS, VUE e NUXT.",
     "name": "portfolio",
     "version": "1.0.0",
     "homepage": "https://lukas13on.github.io/portfolio/",
@@ -21,13 +21,14 @@
         "url": "https://github.com/lukas13on/porfolio"
     },
     "dependencies": {
+        "@nuxtjs/google-analytics": "latest",
+        "@nuxtjs/pwa": "^3.3.5",
         "bootstrap": "latest",
         "font-awesome": "latest",
         "fs": "latest",
         "gh-pages": "latest",
         "jquery": "latest",
         "nuxt": "latest",
-        "@nuxtjs/google-analytics": "latest",
         "path": "latest",
         "sweetalert2": "latest",
         "vue": "latest"

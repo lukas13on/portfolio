@@ -24,6 +24,11 @@ ul.row, ol.row {
     background-color: #DF5126;
 }
 
+.bg-square h1, .bg-circle h1{
+font-family: 'Montserrat Alternates', sans-serif;
+font-weight: 600;
+}
+
 .navbar-brand {
     padding: 7px 8px;
     margin-bottom: 4px;
@@ -135,7 +140,7 @@ ul.row, ol.row {
     /* left: 50%; */
     /* transform: translate(-50%, 0); */
     /* position: absolute; */
-    background-image: url('../images/profile.jpg');
+    background-image: url('../images/profile.png');
     width: 128px;
     height: 128px;
     background-size: cover;
@@ -156,6 +161,7 @@ ul.row, ol.row {
 .detail .sub-title {
     font-weight: 400;
     margin-top: 18px;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .detail .description {
@@ -247,7 +253,7 @@ nav#navbar {
 }
 
 .milk-way {
-    background-image: url('../images/milk-way-high.png');
+    background-image: url('../images/milk-way.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -429,27 +435,6 @@ nav#navbar {
     height: calc(100vh - 80px);
 }
 
-.block-feature {
-}
-
-.block-feature:nth-child(even) {
-}
-
-.block-feature:nth-child(odd) {
-}
-
-.block-feature:nth-child(even) .feature-icon {
-    border-bottom: 3px solid #1a1423;
-    box-shadow: 3px 3px 3px 1px #1a1423;
-    background-color: #1a1423 !important;
-}
-
-.block-feature:nth-child(odd) .feature-icon {
-    border-bottom: 3px solid #03071e;
-    box-shadow: 3px 3px 3px 1px #03071e;
-    background-color: #03071e !important;
-}
-
 .bg-mashed-normal {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#03071e+0,1a1423+100 */
     background: rgb(3,7,30);
@@ -571,6 +556,10 @@ nav#navbar {
 
 /** small devices  */
 @media (max-width: 575.98px) {
+    .btn-block{
+        width: 100%;
+        display: block;
+    }
     .navbar .navbar-nav:after {
     width: 100%;
     height: 100%;

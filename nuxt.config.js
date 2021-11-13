@@ -1,62 +1,46 @@
+const pk = require('./package.json');
+
+const config = {
+    title: pk.author.name,
+    description: pk.description,
+    image: "src/assets/profile.png",
+};
+
 export default {
+    pwa: {
+        meta: {
+            name: config.title,
+            lang: "pt-BR",
+            charset: "utf-8",
+            viewport: "width=device-width, initial-scale=1",
+            mobileApp: true,
+            mobileAppIOS: true,
+            appleStatusBarStyle: "black-translucent",
+            favicon: true,
+            theme_color: "#0d6efd",
+            ogType: "website",
+            ogTitle: config.title,
+            ogDescription: "aaaaaaaa",
+            ogImage: config.image,
+            ogUrl: "https://lukas13on.github.io/portfolio/",
+            /** configurar o twitter */
+            twitterCard: "",
+            twitterSite: "",
+            twitterCreator: "",
+        },
+        manifest: {
+            name: config.title,
+            short_name: config.title,
+            description: config.description,
+            lang: "pt-BR",
+            useWebmanifestExtension: false,
+        },
+        icon: {
+            purpose: 'any',
+        },
+    },
     googleAnalytics: {
         id: "G-TD0Z6Y0SD7"
-    },
-    head: function () {
-        const info = {
-            viewport: "width=device-width, initial-scale=1",
-            seo: {
-                title: "Lucas de Oliveira Neitzke",
-                type: "article",
-                description:
-                    "Desenvolvedor e programador de sites e sistemas para a internet.",
-                keywords: ["desenvolvedor", "programador", "backend", "frontend"],
-                url: "https://lukas13on.github.io/portfolio/",
-                image: {
-                    url: "https://lukas13on.github.io/portfolio/_nuxt/img/og-image.jpg",
-                },
-            },
-        };
-        return {
-            title: info.seo.title,
-            meta: [
-                {
-                    hid: "viewport",
-                    name: "viewport",
-                    content: info.viewport,
-                },
-                {
-                    hid: "description",
-                    name: "description",
-                    content: info.seo.description,
-                },
-                {
-                    hid: "keywords",
-                    name: "keywords",
-                    content: info.seo.keywords.join(","),
-                },
-                {
-                    hid: "og:type",
-                    property: "og:type",
-                    content: info.seo.type,
-                },
-                {
-                    hid: "og:title",
-                    property: "og:title",
-                    content: info.seo.title,
-                },
-                {
-                    hid: "og:url",
-                    property: "og:url",
-                    content: info.seo.url,
-                },
-                {
-                    hid: "og:image",
-                    property: "og:image",
-                    content: info.seo.image.url,
-                },
-            ],
-        };
     },
     cli: {
         badgeMessages:
@@ -81,10 +65,14 @@ export default {
     dir: {
         pages: 'src/pages/',
         assets: 'src/assets/',
+        static: 'src/static/',
     },
     router: {
         base: '/portfolio/',
     },
+    buildModules: [
+        '@nuxtjs/pwa',
+    ],
     target: 'static', // 'static' or 'server'
     ssr: false // true for static, false for server
 };

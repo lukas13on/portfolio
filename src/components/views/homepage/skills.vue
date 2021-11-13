@@ -11,28 +11,30 @@ export default {
           topics: [
             {
               active: false,
-              title: "Conhecimentos",
-              content: "",
+              title: "Formatação",
+              content: "Pleno conhecimento em formatação de documentos HTML.",
             },
             {
               active: false,
               title: "Semântica dos elementos",
-              content: "",
+              content: "Elementos aninhados por padrão, seguindo a semântica.",
             },
             {
               active: false,
               title: "Performance e velocidade",
-              content: "",
+              content:
+                "Uso de técnicas de otimização de carregamento de paginas.",
             },
             {
               active: false,
               title: "Otimização de busca",
-              content: "",
+              content:
+                "Implementação de metadados para interpretação de mecanismos de pesquisa.",
             },
             {
               active: false,
               title: "Protocolo Open Graph",
-              content: "",
+              content: "Previa do site nas maiores redes sociais.",
             },
           ],
         },
@@ -44,27 +46,28 @@ export default {
             {
               active: false,
               title: "Responsividade",
-              content: "",
+              content: "Pragramação de paginas adaptaveis em dispositivos.",
             },
             {
               active: false,
               title: "Performance",
-              content: "",
+              content: "Dominio sobre a técnica Mobile First.",
             },
             {
               active: false,
               title: "Transições",
-              content: "",
+              content:
+                "Uso de transições evitando a utilização de animações desnecessária.",
             },
             {
               active: false,
               title: "Animações",
-              content: "",
+              content: "Elaboração de animações programadas.",
             },
             {
               active: false,
               title: "Bootstrap",
-              content: "",
+              content: "Conhecimento pleno do framework.",
             },
           ],
         },
@@ -75,40 +78,65 @@ export default {
           topics: [
             {
               active: false,
-              title: "Node JS",
-              content: "",
-            },
-            {
-              active: false,
               title: "Vanilla",
-              content: "",
+              content:
+                "Amplo saber sobre a utilização de Javascript para navegadores.",
             },
             {
               active: false,
-              title: "jQuery",
-              content: "",
+              title: "Jquery",
+              content:
+                "Utilização de Jquery para manipulação do documento HTML.",
             },
             {
               active: false,
-              title: "Sweetalert2",
-              content: "",
+              title: "Node",
+              content: "Grande conhecimento sobre modulos e pacotes.",
             },
             {
               active: false,
-              title: "Vue JS",
-              content: "",
+              title: "Nuxt",
+              content: "Criação de aplicações estáticas e dinâmicas.",
+            },
+            {
+              active: false,
+              title: "Vue",
+              content: "Manipulação de componentes, modulos e visualizações.",
             },
           ],
         },
         {
-          title: "php",
+          title: "PHP",
           subtitle: "Linguagem de programação",
           icon: "",
           topics: [
             {
               active: false,
-              title: "Conhecimentos",
-              content: "",
+              title: "Boas práticas",
+              content:
+                "Sigo as recomendações dadas pela PHP Fig, chamados de PSR's.",
+            },
+            {
+              active: false,
+              title: "Segurança",
+              content:
+                "Adoção de praticas defensivas. Proteção contra XSS e SQL Injection.",
+            },
+            {
+              active: false,
+              title: "Crud",
+              content: "Criação de sistemas em geral com a própria engine.",
+            },
+            {
+              active: false,
+              title: "Wordpress",
+              content:
+                "Criação de temas e plugins, customização e gerenciamento.",
+            },
+            {
+              active: false,
+              title: "Magento",
+              content: "Criação de temas e customização de código.",
             },
           ],
         },

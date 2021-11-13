@@ -9,8 +9,8 @@ export default {
       },
       description: {
         paragraphs: [
-          "Atualmente tenho 25 anos, moro no Paraná e sou programador e desenvolvedor web Full Stack.",
-          "Meu interesse pela área surgiu em 2016, eu costumava jogar online e com o tempo me vi interessado em programar, contudo, nesta época eu não possuía conhecimento em programação de jogos, sendo assim iniciei minha carreira desenvolvendo sites para internet. Com o passar dos anos me identifiquei com o trabalho, realizei projetos para: M3 Locações de máquinas, Inove Formaturas e Madaly eventos.",
+          "Atualmente tenho 25 anos, moro no Paraná e sou Desenvolvedor Web Full Stack.",
+          "Meu interesse pela área surgiu em 2016, eu costumava jogar online e com o tempo me vi interessado em programar, contudo, nesta época eu não possuía conhecimento em programação de jogos, sendo assim iniciei minha carreira desenvolvendo sites para internet. Com o passar dos anos me identifiquei com o trabalho, realizei projetos para: M3 Locações de máquinas, Inove Formaturas e Madaly Eventos.",
           "Em 2019 já não satisfeito somente em desenvolver sites, entrei em um projeto de desenvolvimento de sistemas, na empresa Pop Hub. Neste projeto, trabalho com o Front end e Back end da plataforma (dashboard) e o Back end de uma aplicação API, que faz integrações com Marketplaces realizando também, o desenvolvimento do banco de dados da plataforma e API.",
           "Desde 2016, estudei e realizei projetos com o objetivo de aprimorar meus conhecimentos sobre as linguagens de programação, atualmente sou programador Full Stack, tendo domínio sobre: PHP, HTML, Java Script e CSS.",
           "Dentre as minhas habilidades, posso elencar que sou familiarizado com PHP na criação de dashboards em PHP Crud, com Javascript Vanilla e CSS.",
@@ -20,65 +20,69 @@ export default {
       },
       services: [
         {
-          id: "",
+          text: "Paginas de aterrisagem (Landing Pages).",
+        },
+        {
+          text: "Sites, sistemas e aplicativos web (PWA).",
+        },
+        {
+          text: "Sistema do administrador (Dashboard).",
+        },
+        {
+          text: "Sistema de gerenciamento de conteúdo (CMS).",
+        },
+        {
+          text: "Criação de temas e plugins para Wordpress.",
+        },
+        {
+          text: "Desenvolvimento e integração de API's.",
+        },
+        {
+          text: "Lojas virtuais com pagamento online.",
+        },
+        {
           text: "Gerenciamento de servidores e banco de dados.",
         },
         {
-          id: "",
           text: "Gerenciamento dominios e certificados SSL.",
         },
         {
-          id: "",
-          text: "Sistema Web para empresas (PWA)",
-        },
-        {
-          id: "",
-          text: "Paginas de aterrisagem (Landing Pages)",
-        },
-        {
-          id: "",
-          text: "Sites de delivery com pagamento online",
-        },
-        {
-          id: "",
-          text: "Gerenciadores de conteúdo personalizado",
-        },
-        {
-          id: "",
-          text: "Temas Wordpress",
-        },
-        {
-          id: "",
-          text: "Plugins Wordpress",
-        },
-        {
-          id: "",
-          text: "Migrações Wordpress",
+          text: "Para outros serviços verifique a disponibilidade entrando em contato:",
         },
       ],
       features: [
         {
-          title: "Front-end",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et erat efficitur, dignissim tortor sed, dictum urna. Ut erat diam, auctor sed malesuada ac, feugiat nec turpis. Aliquam posuere dui nec nunc ultricies, vitae feugiat magna malesuada placerat.",
+          title: "Front end",
+
+          text: "Criação de layouts com responsividade, garantindo que o usuário consiga utilizar o site ou sistema adequadamente independentemente do dispositivo. Utilização da semântica e boas práticas seguindo as recomendações padrões.",
           icon: {
             class: "fa fa-html5",
             size: 128,
           },
+          background: {
+            class: "",
+          },
         },
         {
-          title: "Back-end",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et erat efficitur, dignissim tortor sed, dictum urna. Ut erat diam, auctor sed malesuada ac, feugiat nec turpis. Aliquam posuere dui nec nunc ultricies, vitae feugiat magna malesuada placerat.",
+          title: "Back end",
+          text: "Desenvolvimento de infraestrutura de servidores e contrução de regras de negócio. Familizarizado com Cpanel e com PHP Crud. Possuo também habilidades com o desenvolvimento de ambientes Back End em Javascript com o uso de Node e Nuxt. ",
           icon: {
             class: "fa fa-code",
             size: 128,
           },
+          background: {
+            class: "",
+          },
         },
         {
           title: "Banco de dados",
-          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et erat efficitur, dignissim tortor sed, dictum urna. Ut erat diam, auctor sed malesuada ac, feugiat nec turpis. Aliquam posuere dui nec nunc ultricies, vitae feugiat magna malesuada placerat.",
+          text: "Pleno conhecimento com banco de dados. Familizarizado com a combinação Cpanel com phpMyAdmin. Contruo os bancos de dados baseados no contexto do produto ou serviço. Noções de fragmentação de dados em diferentes tabelas e ligação de dados e chaves externos com dados da consulta atual.",
           icon: {
             class: "fa fa-database",
             size: 128,
+          },
+          background: {
+            class: "",
           },
         },
       ],
@@ -92,7 +96,7 @@ export default {
     <div class="">
       <div class="bg-square bg-primary text-light text-center">
         <h1>Sobre mim</h1>
-        <p>Aqui estão alguns detalhes sobre mim.</p>
+        <p>Um pouco sobre mim.</p>
       </div>
 
       <div class="row p-block m-0">
@@ -110,9 +114,9 @@ export default {
         <div class="col-12 col-md-4 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Prestação de serviços</h5>
+              <h5 class="card-title">Serviços prestados</h5>
               <p class="card-text">
-                Aqui está uma lista de serviços que eu ofereço:
+                <small class="text-muted">Consulte a lista</small>
               </p>
             </div>
 
@@ -127,7 +131,7 @@ export default {
                 </span>
               </li>
               <li class="list-group-item text-center text-lg-end">
-                <a href="#contact" class="btn btn-lg btn-primary">
+                <a href="#contact" class="btn btn-lg btn-primary btn-block">
                   Entrar em contato
                 </a>
               </li>
@@ -136,8 +140,8 @@ export default {
         </div>
 
         <div class="p-block text-center">
-          <h2>Diferenciais...</h2>
-          <h3>Sim, diferenciais...</h3>
+          <h2>Do Front end ao Back end,</h2>
+          <h3 class="text-muted">um profissional completo.</h3>
         </div>
 
         <div class="col-12 row m-0">
@@ -146,11 +150,16 @@ export default {
             class="col-12 col-lg-4 mb-4 block-feature"
             :key="index"
           >
-            <div class="mb-4 bg-dark text-light mx-auto feature-icon">
-              <i :class="feature.icon.class + ' fa-icon-64'"></i>
+            <div
+              :class="
+                feature.background.class +
+                ' mb-4 text-light mx-auto feature-icon'
+              "
+            >
+              <i :class="feature.icon.class + ' fa-icon-64 text-dark'"></i>
             </div>
 
-            <h3 v-if="feature.title" class="text-center">
+            <h3 v-if="feature.title" class="text-center mb-4">
               {{ feature.title }}
             </h3>
             <h4 v-if="feature.subtitle">{{ feature.subtitle }}</h4>
