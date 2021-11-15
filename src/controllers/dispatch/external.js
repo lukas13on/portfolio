@@ -4,9 +4,9 @@ export default function (url, _blank) {
     Swal.fire({
         title: "Confirmar ação",
         text: "Você será redirecionado para uma página externa, deseja prosseguir?",
-        icon: "warning",
+        icon: "info",
         showCancelButton: true,
-        confirmButtonText: "Abrir",
+        confirmButtonText: "Sim",
         cancelButtonText: "Cancelar"
     }).then(function (result) {
         if (result.value) {

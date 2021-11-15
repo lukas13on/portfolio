@@ -59,9 +59,6 @@ export default {
             class: "fa fa-html5",
             size: 128,
           },
-          background: {
-            class: "",
-          },
         },
         {
           title: "Back end",
@@ -70,9 +67,6 @@ export default {
             class: "fa fa-code",
             size: 128,
           },
-          background: {
-            class: "",
-          },
         },
         {
           title: "Banco de dados",
@@ -80,9 +74,6 @@ export default {
           icon: {
             class: "fa fa-database",
             size: 128,
-          },
-          background: {
-            class: "",
           },
         },
       ],
@@ -140,8 +131,10 @@ export default {
         </div>
 
         <div class="p-block text-center">
-          <h2>Do Front end ao Back end,</h2>
-          <h3 class="text-muted">um profissional completo.</h3>
+          <h2>Conte com o conhecimento e <b>experiência</b> de quem</h2>
+          <h3 class="text-muted">
+            trabalha ha mais de <b>5 anos</b> no ambiente web.
+          </h3>
         </div>
 
         <div class="col-12 row m-0">
@@ -150,13 +143,8 @@ export default {
             class="col-12 col-lg-4 mb-4 block-feature"
             :key="index"
           >
-            <div
-              :class="
-                feature.background.class +
-                ' mb-4 text-light mx-auto feature-icon'
-              "
-            >
-              <i :class="feature.icon.class + ' fa-icon-64 text-dark'"></i>
+            <div class="mb-4 text-light mx-auto feature-icon bg-dark">
+              <i :class="feature.icon.class + ' fa-icon-64 text-light'"></i>
             </div>
 
             <h3 v-if="feature.title" class="text-center mb-4">

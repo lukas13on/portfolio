@@ -9,7 +9,7 @@ export default {
       subtitle: "Desenvolvedor Web Fullstack",
       description: {
         paragraphs: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et erat efficitur, dignissim tortor sed, dictum urna. Ut erat diam, auctor sed malesuada ac, feugiat nec turpis. Aliquam posuere dui nec nunc ultricies, vitae feugiat magna malesuada placerat.",
+          "Trabalho com o desenvolvimento de sites e sistemas para a internet.",
         ],
       },
       socials: [
@@ -71,9 +71,9 @@ export default {
     <div class="detail">
       <img class="photo" />
       <h1 class="title cursive">{{ title }}</h1>
-      <h2 class="sub-title">{{ subtitle }}</h2>
+      <h2 class="sub-title text-muted">{{ subtitle }}</h2>
 
-      <div class="description d-none d-lg-block">
+      <div class="description">
         <p v-for="(paragraph, index) in description.paragraphs" :key="index">
           {{ paragraph }}
         </p>

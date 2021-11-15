@@ -19,14 +19,14 @@ const config = {
         creator: "@lucas_o_neitzke",
         title: pk.author.name,
         description: pk.description,
-        image: pk.homepage + "icon.png",
+        image: pk.homepage + "seo.png",
     },
     openGraph: {
-        type: "article",
+        type: "website",
         url: pk.homepage,
         title: pk.author.name,
         description: pk.description,
-        image: pk.homepage + "icon.png",
+        image: pk.homepage + "seo.png",
         siteName: pk.author.name,
     },
 };
