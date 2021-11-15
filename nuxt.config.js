@@ -1,38 +1,70 @@
 const pk = require('./package.json');
 
+/** seo and meta config */
 const config = {
+    charset: "utf-8",
+    viewport: "width=device-width, initial-scale=1",
+    lang: "pt-BR",
+    themeColor: "#0d6efd",
+    barStyle: "black-translucent",
     title: pk.author.name,
     description: pk.description,
-    image: "src/assets/profile.png",
+    homepage: pk.homepage,
+    googleAnalytics: {
+        id: "G-TD0Z6Y0SD7"
+    },
+    twitterCard: {
+        card: "summary",
+        site: "@lucas_o_neitzke",
+        creator: "@lucas_o_neitzke",
+        title: pk.author.name,
+        description: pk.description,
+        image: pk.homepage + "icon.png",
+    },
+    openGraph: {
+        type: "article",
+        url: pk.homepage,
+        title: pk.author.name,
+        description: pk.description,
+        image: pk.homepage + "icon.png",
+        siteName: pk.author.name,
+    },
 };
 
 export default {
+    head: {
+        title: config.title,
+        meta: [
+            { name: 'twitter:card', content: config.twitterCard.card },
+            { name: 'twitter:site', content: config.twitterCard.site },
+            { name: 'twitter:creator', content: config.twitterCard.creator },
+            { name: 'twitter:title', content: config.twitterCard.title },
+            { name: 'twitter:description', content: config.twitterCard.description },
+            { name: 'twitter:image', content: config.twitterCard.image },
+        ]
+    },
     pwa: {
         meta: {
-            name: config.title,
-            lang: "pt-BR",
-            charset: "utf-8",
-            viewport: "width=device-width, initial-scale=1",
+            lang: config.lang,
+            charset: config.charset,
+            viewport: config.viewport,
             mobileApp: true,
             mobileAppIOS: true,
-            appleStatusBarStyle: "black-translucent",
+            appleStatusBarStyle: config.barStyle,
             favicon: true,
-            theme_color: "#0d6efd",
-            ogType: "website",
-            ogTitle: config.title,
-            ogDescription: "aaaaaaaa",
-            ogImage: config.image,
-            ogUrl: "https://lukas13on.github.io/portfolio/",
-            /** configurar o twitter */
-            twitterCard: "",
-            twitterSite: "",
-            twitterCreator: "",
+            theme_color: config.themeColor,
+            ogType: config.openGraph.type,
+            ogUrl: config.openGraph.url,
+            ogTitle: config.openGraph.title,
+            ogDescription: config.openGraph.description,
+            ogImage: config.openGraph.image,
+            ogSiteName: config.openGraph.siteName,
         },
         manifest: {
             name: config.title,
             short_name: config.title,
             description: config.description,
-            lang: "pt-BR",
+            lang: config.lang,
             useWebmanifestExtension: false,
         },
         icon: {
@@ -40,7 +72,7 @@ export default {
         },
     },
     googleAnalytics: {
-        id: "G-TD0Z6Y0SD7"
+        id: config.googleAnalytics.id,
     },
     cli: {
         badgeMessages:
@@ -70,7 +102,7 @@ export default {
     router: {
         base: '/portfolio/',
     },
-    buildModules: [
+    modules: [
         '@nuxtjs/pwa',
     ],
     target: 'static', // 'static' or 'server'
