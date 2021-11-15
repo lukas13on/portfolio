@@ -104,6 +104,7 @@ export default {
     },
     modules: [
         '@nuxtjs/pwa',
+        '@nuxtjs/google-analytics',
     ],
     target: 'static', // 'static' or 'server'
     ssr: false // true for static, false for server

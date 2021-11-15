@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "@nuxtjs/google-analytics": "latest",
-        "@nuxtjs/pwa": "^3.3.5",
+        "@nuxtjs/pwa": "latest",
         "bootstrap": "latest",
         "font-awesome": "latest",
         "fs": "latest",
