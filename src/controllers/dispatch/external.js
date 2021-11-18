@@ -7,7 +7,8 @@ export default function (url, _blank) {
         icon: "info",
         showCancelButton: true,
         confirmButtonText: "Sim",
-        cancelButtonText: "Cancelar"
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#0d6efd",
     }).then(function (result) {
         if (result.value) {
             var option = _blank === true ? "_blank" : "_self";

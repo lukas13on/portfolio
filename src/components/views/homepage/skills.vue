@@ -183,43 +183,55 @@ export default {
         <h1>Habilidades</h1>
         <p>Aqui estão algumas de minhas habilidades com o ambiente Web.</p>
       </div>
+      <div class="row m-0">
+        <!-- Inicio -->
+        <div class="col-lg-6 row p-block m-0">
+          <div
+            v-for="(group, groupIndex) in groups"
+            class="col-6 mb-4"
+            :key="groupIndex"
+          >
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ group.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  {{ group.subtitle }}
+                </h6>
 
-      <div class="row p-block m-0">
-        <div
-          v-for="(group, groupIndex) in groups"
-          class="col-12 col-md-6 col-xl-3 mb-4"
-          :key="groupIndex"
-        >
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">{{ group.title }}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">
-                {{ group.subtitle }}
-              </h6>
+                <div
+                  v-for="(topic, topicIndex) in group.topics"
+                  class="accordion"
+                  :key="topicIndex"
+                >
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        :class="buttonClass(groupIndex, topicIndex)"
+                        type="button"
+                        @click="toggle(groupIndex, topicIndex)"
+                      >
+                        {{ topic.title }}
+                      </button>
+                    </h2>
 
-              <div
-                v-for="(topic, topicIndex) in group.topics"
-                class="accordion"
-                :key="topicIndex"
-              >
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button
-                      :class="buttonClass(groupIndex, topicIndex)"
-                      type="button"
-                      @click="toggle(groupIndex, topicIndex)"
-                    >
-                      {{ topic.title }}
-                    </button>
-                  </h2>
-
-                  <div :class="contentClass(groupIndex, topicIndex)">
-                    <div class="accordion-body">{{ topic.content }}</div>
+                    <div :class="contentClass(groupIndex, topicIndex)">
+                      <div class="accordion-body">{{ topic.content }}</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <!-- Fim -->
+        <div class="col-6 d-none d-md-flex my-auto">
+          <figure class="w-100 p-5">
+            <img
+              class="w-100"
+              :src="require('@/src/assets/images/skills.svg')"
+              alt="Imagem ilustrativa"
+            />
+          </figure>
         </div>
       </div>
     </div>

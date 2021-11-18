@@ -85,7 +85,7 @@ export default {
 <template>
   <section id="about">
     <div class="">
-      <div class="bg-square bg-primary text-light text-center">
+      <div class="bg-square bg-dark text-light text-center">
         <h1>Sobre mim</h1>
         <p>Um pouco sobre mim.</p>
       </div>
@@ -121,7 +121,7 @@ export default {
                   {{ service.text }}
                 </span>
               </li>
-              <li class="list-group-item text-center text-lg-end">
+              <li class="list-group-item text-center text-sm-end">
                 <a href="#contact" class="btn btn-lg btn-primary btn-block">
                   Entrar em contato
                 </a>
@@ -151,7 +151,7 @@ export default {
               {{ feature.title }}
             </h3>
             <h4 v-if="feature.subtitle">{{ feature.subtitle }}</h4>
-            <p v-if="feature.text" class="text-justified p-0 p-md-4 p-lg-4">
+            <p v-if="feature.text" class="p-0 p-md-4 p-lg-4">
               {{ feature.text }}
             </p>
           </div>

@@ -73,16 +73,20 @@ export default {
       <h1 class="title cursive">{{ title }}</h1>
       <h2 class="sub-title text-muted">{{ subtitle }}</h2>
 
-      <div class="description">
+      <!--<div class="description">
         <p v-for="(paragraph, index) in description.paragraphs" :key="index">
           {{ paragraph }}
         </p>
-      </div>
+      </div>-->
 
       <hr />
 
       <ul class="socials">
-        <li class="social-item" v-for="(social, index) in socials" :key="index">
+        <li
+          class="social-item btn btn-primary"
+          v-for="(social, index) in socials"
+          :key="index"
+        >
           <a
             @click.prevent="openLink(social.href, true)"
             class="social-link"
@@ -90,7 +94,7 @@ export default {
             :target="social.target"
           >
             <span class="link-icon"><i :class="'fa ' + social.icon"></i></span>
-            <span class="link-text d-none d-md-block">{{ social.text }}</span>
+            <span class="link-text d-none d-lg-block">{{ social.text }}</span>
           </a>
         </li>
       </ul>

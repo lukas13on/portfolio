@@ -171,11 +171,9 @@ font-weight: 600;
 
 .detail .socials {
     list-style: none;
-    margin: 24px auto auto auto;
+    margin: 12px auto auto auto;
     padding: 10px 0;
     text-align: center;
-    /* background-color: #fff; */
-    /* border: 1px solid #ccc; */
     border-radius: 6px;
     width: 100%;
 }
@@ -189,15 +187,14 @@ font-weight: 600;
 
 .socials .social-item .social-link {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 50%;
     margin-right: 4px;
     text-decoration: none;
     border-radius: 4px;
-    /* color: #2196f3; */
 }
 
 .socials .social-item .social-link .link-text {
-    font-weight: 600;
+
 }
 
 .socials .social-item .social-link .link-icon {
@@ -391,7 +388,7 @@ nav#navbar {
     right: 0;
     left: 0;
     bottom: 0;
-    padding-bottom: 3rem !important;
+    padding-bottom: 4rem !important;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
     background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
     /* FF3.6-15 */
@@ -553,38 +550,38 @@ nav#navbar {
     box-shadow: none !important;
 }
 
-
-/** small devices  */
-@media (max-width: 575.98px) {
-    .btn-block{
-        width: 100%;
-        display: block;
-    }
-    .navbar .navbar-nav:after {
-    width: 100%;
-    height: 100%;
-    content: "";
-    position: absolute;
-    top: 0px ;
-    left: 0px ;
-    bottom: 0;
-    right: 0;
-    background: rgba(0,0,0,.4);
-    z-index: -1;
+.socials .social-item {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    margin: 6px;
+    overflow: hidden;
+    border-radius: 50%;
 }
-    .navbar-collapse.show {
-        top: 80px !important;
-        right: 0px !important;
-        height: 100% !important;
-        width: 100% !important;
-        max-width: 100% !important;
-    }
 
-    .navbar .navbar-nav {
-    }
+.socials .social-item .social-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: inherit;
+}
+
+.socials .social-item:active, .socials .social-item:hover {
+    opacity: 0.75;
+    color: #fff;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    color: #ccc;
 }
 
 @media (max-width: 991.98px) {
+
+    .socials .social-item {
+        width:64px;
+        height:64px;
+    }
 
     .navbar-collapse.show {
         top: 90px;
@@ -613,8 +610,49 @@ nav#navbar {
 
     .bg-square, .bg-circle {
         padding: 3rem !important;
+    } 
+}
+
+@media (max-width: 767.98px) { 
+    .socials .social-item {
+        width:48px;
+        height:48px;
     }
 }
+
+
+
+@media (max-width: 575.98px) {
+    .socials .social-item {
+        width:36px;
+        height:36px;
+    }
+    .btn-block{
+        width: 100%;
+        display: block;
+    }
+    .navbar .navbar-nav:after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0px ;
+    left: 0px ;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.4);
+    z-index: -1;
+}
+    .navbar-collapse.show {
+        top: 80px !important;
+        right: 0px !important;
+        height: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
+
 
 @media (min-width: 992px) {
     .navbar .navbar-nav {

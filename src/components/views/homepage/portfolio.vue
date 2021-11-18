@@ -224,7 +224,7 @@ export default {
                   <h6>{{ group.subtitle }}</h6>
                   <a
                     @click.prevent="openLink()"
-                    class="btn btn-dark"
+                    class="btn btn-primary"
                     :href="group.url"
                     title="Visitar o site"
                     >Visitar o site

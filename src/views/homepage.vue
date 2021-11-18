@@ -30,8 +30,8 @@ export default {
     <article>
       <homepage-profile></homepage-profile>
       <homepage-about></homepage-about>
-      <homepage-portfolio></homepage-portfolio>
       <homepage-skills></homepage-skills>
+      <homepage-portfolio></homepage-portfolio>
       <homepage-contact></homepage-contact>
     </article>
     <application-footer></application-footer>

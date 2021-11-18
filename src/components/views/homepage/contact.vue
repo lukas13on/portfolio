@@ -324,13 +324,13 @@ export default {
 <template>
   <section id="contact">
     <div class="container-fluid p-0">
-      <div class="bg-dark bg-circle text-light">
+      <div class="bg-primary bg-circle text-light">
         <h1>Contato</h1>
         <p>Preencha os dados corretamente para entrar em contato.</p>
       </div>
 
       <div class="row m-0 p-block">
-        <div class="col-12 col-lg-6 d-none d-lg-block my-auto">
+        <div class="col-lg-6 d-none d-lg-block my-auto">
           <img
             class="w-100"
             :src="require('@/src/assets/images/contact.svg')"
