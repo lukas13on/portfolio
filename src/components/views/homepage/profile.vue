@@ -82,11 +82,7 @@ export default {
       <hr />
 
       <ul class="socials">
-        <li
-          class="social-item btn btn-primary"
-          v-for="(social, index) in socials"
-          :key="index"
-        >
+        <li class="social-item" v-for="(social, index) in socials" :key="index">
           <a
             @click.prevent="openLink(social.href, true)"
             class="social-link"

@@ -115,7 +115,7 @@ export default {
   <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
       <a class="navbar-brand" href="">
-        <span class="logo-text cursive">LON</span>
+        <span class="logo-text cursive">L<span>O</span>N</span>
       </a>
 
       <button

@@ -188,7 +188,7 @@ export default {
         <div class="col-lg-6 row p-block m-0">
           <div
             v-for="(group, groupIndex) in groups"
-            class="col-6 mb-4"
+            class="col-12 col-lg-6 mb-4"
             :key="groupIndex"
           >
             <div class="card">
@@ -224,7 +224,7 @@ export default {
           </div>
         </div>
         <!-- Fim -->
-        <div class="col-6 d-none d-md-flex my-auto">
+        <div class="col-6 d-none d-lg-flex my-auto">
           <figure class="w-100 p-5">
             <img
               class="w-100"

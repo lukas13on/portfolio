@@ -569,11 +569,15 @@ nav#navbar {
 
 .socials .social-item:active, .socials .social-item:hover {
     opacity: 0.75;
-    color: #fff;
+    color: #7986cb;
 }
 
 .carousel-control-next, .carousel-control-prev {
     color: #ccc;
+}
+
+.logo-text span {
+    color: #7986cb;
 }
 
 @media (max-width: 991.98px) {

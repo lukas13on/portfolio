@@ -32,7 +32,7 @@ export default {
         <div class="col-12 bg-dark text-white">
           <div class="text-center p-4">
             <a class="btn" href>
-              <span class="logo-text cursive">LON</span>
+              <span class="logo-text cursive">L<span>O</span>N</span>
             </a>
           </div>
         </div>
