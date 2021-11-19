@@ -85,7 +85,7 @@ export default {
 <template>
   <section id="about">
     <div class="">
-      <div class="bg-square bg-dark text-light text-center">
+      <div class="bg-circle bg-dark text-light text-center">
         <h1>Sobre mim</h1>
         <p>Um pouco sobre mim.</p>
       </div>
